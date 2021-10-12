@@ -43,7 +43,7 @@ process mergeAll {
 process toCsv {
 	publishDir 'output'
 	input: path "merged.geojson" 
-	output: path "filtered.csv" 
+	output: path "merged.csv" 
 	"""
 	jq -r '
 		["name", "lng", "lat"],
@@ -52,6 +52,6 @@ process toCsv {
 			.geometry.coordinates[0], 
 			.geometry.coordinates[1]]) 
 		| @csv' \
-	merged.geojson > filtered.csv
+	merged.geojson > merged.csv
 	"""
 }
