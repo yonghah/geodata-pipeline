@@ -23,7 +23,7 @@ process earthquake {
 }
 
 process pointplot {
-    publishDir 'output'
+    publishDir 'output', mode: 'copy'
     input:
         path "earthquake.csv"
     output:
