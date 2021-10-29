@@ -1,8 +1,9 @@
 #!/usr/bin/env nextflow
 nextflow.enable.dsl=2
 
-cityName = 'Pyongyang'
-range = [1500, 3000, 5000, 10000]
+cityName = 'Seoul'
+range = [800, 1500, 3000]  // in km
+maprange = 40  // degree
 
 workflow {
     city = channel.of(cityName)
@@ -36,7 +37,7 @@ process rangeplot {
         """
         gmt begin
             gmt figure range pdf
-            gmt pscoast -Rd -JE125.75/39.02/120/20c -Gburlywood -Slightblue -A1000 
+            gmt pscoast -Rd -JE125.75/39.02/${maprange}/20c -Gburlywood -Slightblue -A1000 
             gmt plot lnglat.csv -Sa.2c -Wthicker,blue
             for r in ${diameter}
             do
