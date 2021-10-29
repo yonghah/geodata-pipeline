@@ -1,7 +1,7 @@
 nextflow.enable.dsl=2
 
 process plot {
-	publishDir 'output'
+	publishDir 'output', mode: 'copy'
     output:
       	path 'world.pdf'
     script:

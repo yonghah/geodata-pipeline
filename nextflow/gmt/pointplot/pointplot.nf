@@ -7,7 +7,7 @@ workflow {
 }
 
 process earthquake {
-    publishDir 'output'
+    publishDir 'output', mode: 'copy'
     output:
         path "earthquake.csv"
     script:
