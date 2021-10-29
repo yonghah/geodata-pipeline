@@ -14,7 +14,6 @@ modules/nextflow/work/
 **/out/*
 tmp/*
 work/*
-output
 work
 nextflow.eml
 nextflow.iml
