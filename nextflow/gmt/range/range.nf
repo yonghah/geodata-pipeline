@@ -1,17 +1,17 @@
 #!/usr/bin/env nextflow
 nextflow.enable.dsl=2
 
-// lat lng from this
-// curl "https://nominatim.openstreetmap.org/search.php?q=Pyongyang&format=json" \
-// | jq '.[0] | {lat, lon}'
+cityName = 'Pyongyang'
+range = [1500, 3000, 5000, 10000]
 
 workflow {
-    city = channel.of('Pyongyang')
+    city = channel.of(cityName)
     getLngLat(city)
     rangeplot(getLngLat.out)
 }
 
 process getLngLat {
+    // get Lng and Lat from nominatim
     input:
         val city 
     output:
@@ -30,12 +30,15 @@ process rangeplot {
     output:
         path "range.pdf"
     script:
-        range = [0, 30*2, 1500*2, 3000*2, 5000*2, 10000*2]
+        diameter = [
+            0,  // dummy
+            *range.collect{it*2}]
         """
         gmt begin
             gmt figure range pdf
             gmt pscoast -Rd -JE125.75/39.02/120/20c -Gburlywood -Slightblue -A1000 
-            for r in ${range}
+            gmt plot lnglat.csv -Sa.2c -Wthicker,blue
+            for r in ${diameter}
             do
                 gmt plot lnglat.csv -SE-\$r -Wthin,firebrick
             done
