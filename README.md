@@ -2,8 +2,14 @@
 
 Recipes for geodata pipelines for workflow frameworks such as [Nextflow](https://www.nextflow.io/). Only use CLI tools. 
 
+Utilizing Nextflow gives
+- better readability
+- easier Docker use
+- partial run (resume after failure)
+- concurrent execution
 
-## examples
+
+## Examples
 
 ### Display all restaurants in New Caledonia, Fiji, Vanuatu
 
