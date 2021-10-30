@@ -30,10 +30,10 @@ Use downloaded SRTM from USGS; merge tiff (gdal_translate); rescale and reprojec
 
 [https://github.com/yonghah/geodata-pipeline/blob/main/nextflow/gmt/pointplot/pointplot.nf](https://github.com/yonghah/geodata-pipeline/blob/main/nextflow/gmt/pointplot/pointplot.nf)
 
-![](image/pointdata.png | width=500)
+![](image/pointdata.png)
 
 #### Range from a city
 
 [https://github.com/yonghah/geodata-pipeline/blob/main/nextflow/gmt/range/range.nf](https://github.com/yonghah/geodata-pipeline/blob/main/nextflow/gmt/range/range.nf)
 
-![](image/range.png | width=500)
+![](image/range.png)
