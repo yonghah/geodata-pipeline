@@ -23,7 +23,7 @@ Use downloaded SRTM from USGS; merge tiff (gdal_translate); rescale and reprojec
 
 [https://github.com/yonghah/geodata-pipeline/blob/main/nextflow/gmt/helloworld/helloworld.nf](https://github.com/yonghah/geodata-pipeline/blob/main/nextflow/gmt/helloworld/helloworld.nf)
 
-![](image/hello-world.png | width=500)
+![](image/hello-world.png)
 
 
 #### Display Point Data
