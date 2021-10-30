@@ -1,6 +1,6 @@
 # Geodata Pipeline Recipes
 
-Recipes for geodata pipelines for workflow frameworks such as [Nextflow](https://www.nextflow.io/). Only use CLI tools. 
+Recipes for geodata pipelines for workflow frameworks such as [Nextflow](https://www.nextflow.io/). These workflows are heavily dependent on CLI tools such as [ogr/gdal](https://gdal.org/), [osmium](https://osmcode.org/osmium-tool/), [GMT](https://www.generic-mapping-tools.org/) and so on. 
 
 Utilizing Nextflow gives
 - better readability
