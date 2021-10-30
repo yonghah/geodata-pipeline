@@ -30,7 +30,7 @@ Use downloaded SRTM from USGS; merge tiff (gdal_translate); rescale and reprojec
 
 [https://github.com/yonghah/geodata-pipeline/blob/main/nextflow/gmt/pointplot/pointplot.nf](https://github.com/yonghah/geodata-pipeline/blob/main/nextflow/gmt/pointplot/pointplot.nf)
 
-![](image/pointdata.png)
+![](image/earthquake.png)
 
 #### Range from a city
 
